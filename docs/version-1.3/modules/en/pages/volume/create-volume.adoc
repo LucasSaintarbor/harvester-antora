@@ -1,9 +1,4 @@
 = Create a Volume
-:description: Create a volume from the Volume page.
-:id: index
-:keywords: ["Volume"]
-:sidebar_label: Create a Volume
-:sidebar_position: 1
 
 == Create an Empty Volume
 
@@ -18,7 +13,7 @@
 . Select an existing `StorageClass`.
 . Configure the `Size` of the volume.
 
-image::/img/v1.2/volume/create-empty-volume.png[create-empty-volume]
+image::volume/create-empty-volume.png[create-empty-volume]
 
 == Create an Image Volume
 
@@ -35,11 +30,9 @@ image::/img/v1.2/volume/create-empty-volume.png[create-empty-volume]
 
 [CAUTION]
 ====
-
 When creating volumes from a VM image, ensure that the volume size is greater than or equal to the image size. The volume may become corrupted if the configured volume size is less than the size of the underlying image. This is particularly important for qcow2 images because the virtual size is typically greater than the physical size.
 
 To determine the virtual size of a qcow2 image, you can run the command `qemu-img info YOUR_IMAGE_FILE.qcow2`.
 ====
 
-
-image::/img/v1.2/volume/create-image-volume.png[create-image-volume]
+image::volume/create-image-volume.png[create-image-volume]

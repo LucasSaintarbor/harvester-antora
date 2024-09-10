@@ -1,14 +1,9 @@
 = Live Migration
-:description: Live migration means moving a virtual machine to a different host without downtime.
-:keywords: ["Harvester", "harvester", "Rancher", "rancher", "Live Migration"]
-:sidebar_label: Live Migration
-:sidebar_position: 6
 
 Live migration means moving a virtual machine to a different host without downtime.
 
 [NOTE]
 ====
-
 * Live migration is not allowed when the virtual machine is using a management network of bridge interface type.
 * Live migration is not allowed when the virtual machine has any volume of the `CD-ROM` type. Such volumes should be ejected before live migration.
 * Live migration is not allowed when the virtual machine has any volume of the `Container Disk` type. Such volumes should be removed before live migration.
@@ -30,7 +25,7 @@ When `host-model` is used, the process fetches the value of the primary CPU mode
 
 Alternatively, you can customize the CPU model in `spec.domain.cpu.model`. For example, if the CPU model is `XYZ`, the process fills `spec.NodeSelectors` of the newly created pod with the label `cpu-model.node.kubevirt.io/XYZ`.
 
-However, `host-model` only allows migration of the VM to a node with same CPU model. For more information, see <<limitation,Limitations>>.
+However, `host-model` only allows migration of the VM to a node with same CPU model. For more information, see <<Limitation,Limitations>>.
 
 == Starting a Migration
 
@@ -38,14 +33,14 @@ However, `host-model` only allows migration of the VM to a node with same CPU mo
 . Find the virtual machine that you want to migrate and select *⋮ > Migrate*.
 . Choose the node to which you want to migrate the virtual machine. Click *Apply*.
 
-image::/img/v1.2/vm/migrate-action.png[]
+image::vm/migrate-action.png[]
 
-When you have link:./create-windows-vm.adoc#node-scheduling-tab[node scheduling rules] configured for a VM, you must ensure that the target nodes you are migrating to meet the VM's runtime requirements. The list of nodes you get to search and select from will be generated based on:
+When you have xref:./create-windows-vm.adoc#_node_scheduling_tab[node scheduling rules] configured for a VM, you must ensure that the target nodes you are migrating to meet the VM's runtime requirements. The list of nodes you get to search and select from will be generated based on:
 
 * VM scheduling rules.
 * Possibly node rules from the network configuration.
 
-image::/img/v1.2/vm/migrate.png[]
+image::vm/migrate.png[]
 
 == Aborting a Migration
 

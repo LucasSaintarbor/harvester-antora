@@ -1,12 +1,10 @@
 = Rancher Manager (Experimental)
-:sidebar_label: Rancher Manager
-:sidebar_position: 5
 
 _Available as of v1.2.0_
 
 The `rancher-vcluster` addon allows you to run Rancher Manager as a workload on the underlying Harvester cluster and is implemented using https://www.vcluster.com/[vcluster].
 
-image::/img/v1.2/vm-import-controller/EnableAddon.png[]
+image::vm-import-controller/EnableAddon.png[]
 
 The addon runs a nested K3s cluster in the `rancher-vcluster` namespace and deploys Rancher to this cluster.
 
@@ -18,6 +16,7 @@ The `rancher-vcluster` addon is not packaged with Harvester, but you can find it
 
 Assuming you are using the Harvester kubeconfig, you can run the following commands to install the addon:
 
+[,sh]
 ----
 kubectl apply -f https://raw.githubusercontent.com/harvester/experimental-addons/main/rancher-vcluster/rancher-vcluster.yaml
 ----
@@ -28,8 +27,8 @@ After installing the addon, you need to configure it from the Harvester UI as fo
 
 . Select *Advanced* > *Addons*.
 . Find the `rancher-vcluster` addon and select *⋮* > *Edit Config*.
-
-image::/img/v1.2/rancher-vcluster/VclusterConfig.png[]
++
+image::rancher-vcluster/VclusterConfig.png[]
 
 . In the *Hostname* field, enter a valid DNS record pointing to the Harvester VIP. This is essential as the vcluster ingress is synced to the parent Harvester cluster. A valid hostname is used to filter ingress traffic to the vcluster workload.
 . In the *Bootstrap Password* field, enter the bootstrap password for the new Rancher deployed on the vcluster.
@@ -43,7 +42,6 @@ See xref:../../rancher/virtualization-management.adoc[Rancher Integration] for m
 [NOTE]
 .Disabling rancher-vcluster
 ====
-
 The `rancher-vcluster` addon is deployed on a `vcluster` Statefulset that uses a Longhorn PVC.
 
 When `rancher-vcluster` is disabled, the PVC `data-rancher-vcluster-0` will remain in the `rancher-vcluster` namespace.

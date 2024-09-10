@@ -1,7 +1,4 @@
 = IP Pool
-:keywords: ["IP Pool"]
-:sidebar_label: IP Pool
-:sidebar_position: 5
 
 _Available as of v1.2.0_
 
@@ -28,9 +25,11 @@ To create a new IP pool:
 . Go to the *Networks* > *IP Pools* page and select *Create*.
 . Specify the *Name* of the IP pool.
 . Go to the *Range* tab to specify the *IP ranges* for the IP pool. You can add multiple IP ranges.
-image:/img/v1.2/networking/multiple-ranges.png[]
++
+image::networking/multiple-ranges.png[]
 . Go to the *Selector* tab to specify the *Scope* and *Priority* of the IP pool.
-image:/img/v1.2/networking/ippool-scope.png[]
++
+image::networking/ippool-scope.png[]
 
 == Selection policy
 
@@ -86,8 +85,7 @@ spec:
 ----
 
 * *Example 3:* If you have specified the IP pool `default-ip-pool` for the `default` namespace, you want to migrate the IP pool `default-ip-pool` to a different IP pool `default-ip-pool-2` with range `192.168.200.0/24`. It's not allowed to specify over one IP pool for the same scope, but you can give the IP pool `default-ip-pool-2` a higher priority than `default-ip-pool`. Refer to the following `YAML` config:
-* {blank}
-
++
 [,yaml]
 ----
   apiVersion: networking.harvesterhci.io/v1beta1
@@ -128,7 +126,5 @@ spec:
 
 [NOTE]
 ====
-
 Starting with Harvester v1.2.0,  the `vip-pools` setting is deprecated. Following the upgrade, this setting will be automatically migrated to the Harvester IP pools.
 ====
-
