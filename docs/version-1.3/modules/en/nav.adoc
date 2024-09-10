@@ -1,0 +1,160 @@
+* xref:index.adoc[]
+
+// Folder: getting-started:
+* Getting Started
+** xref:getting-started/deploy-ha-cluster.adoc[]
+** xref:getting-started/deploy-singlenode-cluster.adoc[]
+** xref:getting-started/glossary.adoc[]
+
+// Folder: install:
+
+* Installation
+** xref:install/requirements.adoc[]
+** xref:install/iso-install.adoc[]
+** xref:install/usb-install.adoc[]
+** xref:install/pxe-boot-install.adoc[]
+** xref:install/harvester-configuration.adoc[]
+** xref:install/update-harvester-configuration.adoc[]
+** xref:install/management-address.adoc[]
+** xref:install/install-binaries-mode.adoc[]
+** xref:install/net-install.adoc[]
+
+* xref:airgap.adoc[]
+
+// Folder: upgrade:
+
+* Upgrade
+** xref:upgrade/automatic.adoc[]
+** xref:upgrade/troubleshooting.adoc[]
+** xref:upgrade/v1-1-2-to-v1-2-0.adoc[]
+** xref:upgrade/v1-2-0-to-v1-2-1.adoc[]
+** xref:upgrade/v1-2-1-to-v1-2-2.adoc[]
+** xref:upgrade/v1-2-2-to-v1-3-1.adoc[]
+** xref:upgrade/v1-3-1-to-v1-3-2.adoc[]
+
+* xref:authentication.adoc[]
+
+* xref:upload-image.adoc[]
+
+// Folder: vm:
+
+* VM Management
+** xref:vm/create-vm.adoc[]
+** xref:vm/create-windows-vm.adoc[]
+** xref:vm/edit-vm.adoc[]
+** xref:vm/access-to-the-vm.adoc[]
+** xref:vm/backup-restore.adoc[]
+** xref:vm/live-migration.adoc[]
+** xref:vm/hotplug-volume.adoc[]
+** xref:vm/resource-overcommit.adoc[]
+** xref:vm/clone-vm.adoc[]
+
+xref:faq.adoc[]
+
+// Folder: advanced:
+
+advanced/addons.adoc
+advanced/cloudinitcrd.adoc
+advanced/csidriver.adoc
+advanced/customsuseimages.adoc
+advanced/settings.adoc
+advanced/singlenodeclusters.adoc
+advanced/storageclass.adoc
+advanced/storagenetwork.adoc
+advanced/vgpusupport.adoc
+advanced/witness.adoc
+
+// Folder: advanved/addons:
+
+advanced/addons/managed-dhcp.adoc
+advanced/addons/nvidiadrivertoolkit.adoc
+advanced/addons/pcidevices.adoc
+advanced/addons/rancher-vcluster.adoc
+advanced/addons/seeder.adoc
+advanced/addons/vmimport.adoc
+
+// Folder: developer:
+
+developer/addon-development.adoc
+
+// Folder: host:
+
+host/host.adoc
+
+// Folder: install:
+
+install/harvester-configuration.adoc
+install/install-binaries-mode.adoc
+install/iso-install.adoc
+install/management-address.adoc
+install/net-install.adoc
+install/pxe-boot-install.adoc
+install/requirements.adoc
+install/update-harvester-configuration.adoc
+install/usb-install.adoc
+
+// Folder: logging:
+
+logging/harvester-logging.adoc
+
+// Folder: monitoring:
+
+monitoring/harvester-monitoring.adoc
+
+// Folder: networking:
+
+networking/best-practice.adoc
+networking/clusternetwork.adoc
+networking/deep-dive.adoc
+networking/harvester-network.adoc
+networking/ippool.adoc
+networking/loadbalancer.adoc
+
+// Folder: rancher:
+
+rancher/cloud-provider.adoc
+rancher/csi-driver.adoc
+rancher/import-existing-vm.adoc
+rancher/rancher-integration.adoc
+rancher/rancher-terraform.adoc
+rancher/resource-quota.adoc
+rancher/virtualization-management.adoc
+
+// Folder: rancher/node/:
+
+rancher/node/k3s-cluster.adoc
+rancher/node/node-driver.adoc
+rancher/node/rke1-cluster.adoc
+rancher/node/rke2-cluster.adoc
+
+// Folder: terraform:
+
+terraform/terraform-provider.adoc
+
+// Folder: troubleshooting:
+
+troubleshooting/harvester.adoc
+troubleshooting/installation.adoc
+troubleshooting/monitoring.adoc
+troubleshooting/os.adoc
+troubleshooting/vm.adoc
+
+// Folder: vm:
+
+vm/access-to-the-vm.adoc
+vm/backup-restore.adoc
+vm/clone-vm.adoc
+vm/create-vm.adoc
+vm/create-windows-vm.adoc
+vm/edit-vm.adoc
+vm/hotplug-volume.adoc
+vm/live-migration.adoc
+vm/resource-overcommit.adoc
+
+// Folder: volume:
+
+volume/clone-volume.adoc
+volume/create-volume.adoc
+volume/edit-volume.adoc
+volume/export-volume.adoc
+volume/volume-snapshots.adoc
