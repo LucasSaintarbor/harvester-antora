@@ -1,7 +1,0 @@
-name: harvester-product-docs
-title: Harvester
-version: v1.3
-display_version: 'v1.3 (Latest)'
-start_page: en:index.adoc
-nav:
-- modules/en/nav.adoc
