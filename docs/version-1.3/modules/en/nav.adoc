@@ -93,6 +93,23 @@ xref:faq.adoc[]
 ** xref:advanced/vgpusupport.adoc[]
 ** xref:advanced/witness.adoc[]
 
+// Folder: rancher:
+
+* Rancher Integration
+** xref:rancher/rancher-integration.adoc[]
+// Folder: rancher/node/
+** Harvester Node Drive
+*** xref:rancher/node/k3s-cluster.adoc[]
+*** xref:rancher/node/node-driver.adoc[]
+*** xref:rancher/node/rke1-cluster.adoc[]
+*** xref:rancher/node/rke2-cluster.adoc[]
+** xref:rancher/virtualization-management.adoc[]
+** xref:rancher/cloud-provider.adoc[]
+** xref:rancher/csi-driver.adoc[]
+** xref:rancher/resource-quota.adoc[]
+** xref:rancher/rancher-terraform.adoc[]
+** xref:rancher/import-existing-vm.adoc[]
+
 // Folder: developer:
 
 developer/addon-development.adoc
@@ -129,23 +146,6 @@ networking/deep-dive.adoc
 networking/harvester-network.adoc
 networking/ippool.adoc
 networking/loadbalancer.adoc
-
-// Folder: rancher:
-
-rancher/cloud-provider.adoc
-rancher/csi-driver.adoc
-rancher/import-existing-vm.adoc
-rancher/rancher-integration.adoc
-rancher/rancher-terraform.adoc
-rancher/resource-quota.adoc
-rancher/virtualization-management.adoc
-
-// Folder: rancher/node/:
-
-rancher/node/k3s-cluster.adoc
-rancher/node/node-driver.adoc
-rancher/node/rke1-cluster.adoc
-rancher/node/rke2-cluster.adoc
 
 // Folder: terraform:
 

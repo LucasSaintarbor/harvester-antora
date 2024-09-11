@@ -1,36 +1,41 @@
 = Harvester Node Driver
-:description: The Harvester node driver is used to provision VMs in the Harvester cluster. In this section, you'll learn how to configure Rancher to use the Harvester node driver to launch and manage Kubernetes clusters.
-:keywords: ["Harvester", "harvester", "Rancher", "rancher", "Harvester Node Driver"]
-:sidebar_label: Harvester Node Driver
-:sidebar_position: 1
 
 The https://github.com/harvester/docker-machine-driver-harvester[Harvester node driver], similar to the Docker Machine driver, is used to provision VMs in the Harvester cluster, and Rancher uses it to launch and manage Kubernetes clusters.
 
 One benefit of installing Kubernetes on node pools hosted by the node driver is that if a node loses connectivity with the cluster, Rancher can automatically create another node to join the cluster to ensure that the count of the node pool is as expected.
-Additionally, the Harvester node driver is integrated with the Harvester cloud provider by default, providing link:../cloud-provider.adoc#load-balancer-support[built-in load balancer support] as well as xref:../csi-driver.adoc[storage passthrough] from the bare-metal cluster to the guest Kubernetes clusters to gain native storage performance.
+Additionally, the Harvester node driver is integrated with the Harvester cloud provider by default, providing xref:../rancher/cloud-provider.adoc#_load_balancer_support[built-in load balancer support] as well as xref:../csi-driver.adoc[storage passthrough] from the bare-metal cluster to the guest Kubernetes clusters to gain native storage performance.
+
+Test
+xref:./k3s-cluster.adoc[]
+
+Test
+xref:rancher/cloud-provider.adoc[]
+
+Test
+xref:../cloud-provider.adoc[]
+
+Test
+xref:pages/rancher/cloud-provider.adoc[]
 
 In this section, you'll learn how to configure Rancher to use the Harvester node driver to launch and manage Kubernetes clusters.
 
 [NOTE]
 ====
-
 The Harvester node driver only supports cloud images. This is because ISO images usually require additional setup that interferes with a clean deployment (without requiring user intervention), and they are not typically used in cloud environments.
 ====
-
 
 == Harvester node driver
 
 Starting from Rancher `v2.6.3`, the Harvester node driver is enabled by default. You can go to the *Cluster Management* > *Drivers* > *Node Drivers* page to check the Harvester node driver status.
 
-image::/img/v1.2/rancher/edit-node-driver.png[edit-node-driver]
+image::rancher/edit-node-driver.png[edit-node-driver]
 
 When the Harvester node driver is enabled, you can create Kubernetes clusters on top of the Harvester cluster and manage them from Rancher.
 
-image::/img/v1.2/rancher/harvester-node-driver.png[harvester-node-driver]
+image::rancher/harvester-node-driver.png[harvester-node-driver]
 
 [NOTE]
 ====
-
 * Refer to the https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-7-5[Rancher downstream cluster support matrix] for its supported RKE2 versions and guest OS versions.
 * Changes made to the node driver configuration is not persisted. Any modifications applied will be reset upon restarting the Rancher container.
 * Starting with Harvester node driver v0.6.3, the automatic injection of the `qemu-guest-agent` has been removed from the backend. If the image you are using does not contain the `qemu-guest-agent` package, you can still install it via the `userdata` config. Otherwise, the cluster will not be provisioned successfully.
@@ -48,7 +53,6 @@ image::/img/v1.2/rancher/harvester-node-driver.png[harvester-node-driver]
    - qemu-guest-agent.service
 ----
 ====
-
 
 == Known Issues
 
@@ -113,11 +117,11 @@ topology.kubernetes.io/region: us-east-1
 topology.kubernetes.io/zone: us-east-1a
 ----
 +
-image::/img/v1.2/rancher/node-add-affinity-labels.png[]
+image::rancher/node-add-affinity-labels.png[]
 
 . Create a downstream RKE2 cluster using the Harvester node driver with Harvester cloud provider enabled. We recommend adding the link:./rke2-cluster.adoc#add-node-affinity[node affinity rules], which prevents nodes from drifting to other zones after VM rebuilding.
 +
-image::/img/v1.2/rancher/create-rke2-harvester-cluster-3.png[]
+image::rancher/create-rke2-harvester-cluster-3.png[]
 
 . After the cluster is ready, confirm that those topology labels are successfully synchronized to the nodes on the guest Kubernetes cluster.
 . Now deploy workloads on your guest Kubernetes cluster, and you should be able to manage them using the https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/[topology spread constraints].
